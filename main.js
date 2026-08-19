@@ -57,6 +57,14 @@ document.addEventListener('DOMContentLoaded', () => {
       .catch(() => onError());
   }
 
+  function openEmailDraft(form, subject) {
+    const fields = Array.from(new FormData(form))
+      .filter(([name, value]) => name !== 'form-name' && name !== 'bot-field' && value)
+      .map(([name, value]) => `${name}: ${value}`)
+      .join('\n');
+    window.location.href = `mailto:ibnkhaldunschoolbanshkhali@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(fields)}`;
+  }
+
   // ---------- Admission form ----------
   const admissionForm = document.getElementById('admissionForm');
   if (admissionForm) {
@@ -74,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
         window.scrollTo({ top: document.querySelector('.form-card').offsetTop - 100, behavior: 'smooth' });
       }, () => {
         if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'রেজিস্ট্রেশন জমা দিন'; }
-        alert('দুঃখিত, ফরম পাঠাতে সমস্যা হয়েছে। আবার চেষ্টা করুন অথবা সরাসরি কল করুন।');
+        openEmailDraft(admissionForm, 'ভর্তি রেজিস্ট্রেশন আবেদন');
       });
     });
   }
@@ -95,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('contactSuccess').style.display = 'block';
       }, () => {
         if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'বার্তা পাঠান'; }
-        alert('দুঃখিত, বার্তা পাঠাতে সমস্যা হয়েছে। আবার চেষ্টা করুন অথবা সরাসরি কল করুন।');
+        openEmailDraft(contactForm, 'ইবনে খালদুন স্কুলে যোগাযোগ');
       });
     });
   }
