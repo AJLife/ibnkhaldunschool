@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+<title>ভর্তি রেজিস্ট্রেশন — Ibn Khaldun School, Banshkhali</title>
+<link rel="icon" href="../assets/img/logo.png" type="image/png">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="marquee">
+    <div class="marquee-track">
+      <span>২০২৭ শিক্ষাবর্ষের ভর্তি চলছে — ৬ষ্ঠ থেকে নবম শ্রেণি পর্যন্ত সীমিত আসনে। আবেদনের শেষ তারিখ ৩০ নভেম্বর, ২০২৬।</span>
+    </div>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a href="../index.html" class="brand">
+      <img src="../assets/img/logo.png" alt="ইবনে খালদুন স্কুল লোগো">
+      <div class="brand-text"><div class="bn">ইবনে খালদুন স্কুল</div><div class="en">Banshkhali</div></div>
+    </a>
+    <button class="hamburger" aria-label="মেনু খুলুন" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="../index.html">হোম</a></li>
+        <li class="has-dropdown">
+          <a href="about.html">আমাদের সম্পর্কে <span class="caret">▾</span></a>
+          <button class="dd-toggle" aria-label="সাবমেনু খুলুন"><span class="caret">▾</span></button>
+          <div class="dropdown-panel">
+            <a href="about.html#history"><span class="dd-ic">📖</span> আমাদের পরিচিতি ও ইতিহাস</a>
+            <a href="about.html#board"><span class="dd-ic">🏛️</span> স্কুল পরিচালনা পর্ষদ</a>
+            <a href="about.html#shareholders"><span class="dd-ic">🤝</span> সম্মানিত বিনিয়োগকারীগণ</a>
+            <a href="about.html#staff-intro"><span class="dd-ic">👩‍🏫</span> শিক্ষক ও স্টাফ পরিচিতি</a>
+            <a href="about.html#facilities"><span class="dd-ic">🏫</span> সুযোগ-সুবিধা ও ক্যাম্পাস</a>
+            <a href="about.html#cocurricular"><span class="dd-ic">🎭</span> কো-কারিকুলার এক্টিভিটিস</a>
+          </div>
+        </li>
+        <li><a href="notices.html">নোটিশ</a></li>
+        <li><a href="staff.html">শিক্ষক মণ্ডলী</a></li>
+        <li><a href="gallery.html">গ্যালারি</a></li>
+        <li><a href="contact.html">যোগাযোগ</a></li>
+        <li><a href="admission.html" class="nav-cta active">ভর্তি ফরম</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="page-head">
+  <div class="container">
+    <div class="breadcrumb"><a href="../index.html">হোম</a> / ভর্তি রেজিস্ট্রেশন</div>
+    <h1>ভর্তি রেজিস্ট্রেশন ফরম</h1>
+    <p>ভর্তি চলছে: ৬ষ্ঠ থেকে ৯ম শ্রেণি (বিজ্ঞান বিভাগ)। নিচের ফরমটি সম্পূর্ণ পূরণ করে রেজিস্ট্রেশন করুন — আসন সংখ্যা সীমিত। ফোন: 01632-422505</p>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div class="grid-2" style="grid-template-columns: 2fr 1fr; gap:40px; align-items:flex-start;">
+
+      <div class="reveal">
+        <div class="form-card">
+          <form id="admissionForm" name="admission" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+            <input type="hidden" name="form-name" value="admission">
+            <p class="hidden" style="display:none;"><label>Don't fill this out if you're human: <input name="bot-field"></label></p>
+
+            <div class="fieldset-title">শিক্ষার্থীর তথ্য</div>
+            <div class="form-row">
+              <div class="field">
+                <label for="studentName">শিক্ষার্থীর পূর্ণ নাম <span class="req">*</span></label>
+                <input type="text" id="studentName" name="studentName" required>
+              </div>
+              <div class="field">
+                <label for="dob">জন্ম তারিখ <span class="req">*</span></label>
+                <input type="date" id="dob" name="dob" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label for="gender">লিঙ্গ <span class="req">*</span></label>
+                <select id="gender" name="gender" required>
+                  <option value="">নির্বাচন করুন</option>
+                  <option value="male">ছেলে</option>
+                  <option value="female">মেয়ে</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="classApply">যে শ্রেণিতে ভর্তি হতে চান <span class="req">*</span></label>
+                <select id="classApply" name="classApply" required>
+                  <option value="">নির্বাচন করুন</option>
+                  <option>৬ষ্ঠ শ্রেণি</option>
+                  <option>৭ম শ্রেণি</option>
+                  <option>৮ম শ্রেণি</option>
+                  <option>৯ম শ্রেণি</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="prevSchool">পূর্ববর্তী বিদ্যালয়ের নাম (যদি থাকে)</label>
+              <input type="text" id="prevSchool" name="prevSchool">
+            </div>
+
+            <div class="fieldset-title">অভিভাবকের তথ্য</div>
+            <div class="form-row">
+              <div class="field">
+                <label for="fatherName">পিতার নাম <span class="req">*</span></label>
+                <input type="text" id="fatherName" name="fatherName" required>
+              </div>
+              <div class="field">
+                <label for="motherName">মাতার নাম <span class="req">*</span></label>
+                <input type="text" id="motherName" name="motherName" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label for="guardianPhone">অভিভাবকের মোবাইল নম্বর <span class="req">*</span></label>
+                <input type="tel" id="guardianPhone" name="guardianPhone" placeholder="০১XXXXXXXXX" required>
+              </div>
+              <div class="field">
+                <label for="guardianEmail">ইমেইল (যদি থাকে)</label>
+                <input type="email" id="guardianEmail" name="guardianEmail">
+              </div>
+            </div>
+            <div class="field">
+              <label for="address">বর্তমান ঠিকানা <span class="req">*</span></label>
+              <textarea id="address" name="address" required></textarea>
+            </div>
+
+            <div class="fieldset-title">অতিরিক্ত তথ্য</div>
+            <div class="field">
+              <label for="notes">কোনো বিশেষ মন্তব্য বা তথ্য (ঐচ্ছিক)</label>
+              <textarea id="notes" name="notes" placeholder="যেমনঃ শারীরিক প্রতিবন্ধকতা, বিশেষ চাহিদা ইত্যাদি"></textarea>
+              <div class="field-hint">এই ফরম পূরণের পর আমাদের প্রতিনিধি শীঘ্রই আপনার সাথে যোগাযোগ করবেন।</div>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="border:none; margin-top:10px;">রেজিস্ট্রেশন জমা দিন</button>
+          </form>
+
+          <div class="form-success" id="admissionSuccess">
+            <div class="check">✓</div>
+            <h3>ধন্যবাদ! আপনার আবেদন গৃহীত হয়েছে</h3>
+            <p>আমাদের প্রতিনিধি শীঘ্রই আপনার দেওয়া মোবাইল নম্বরে যোগাযোগ করবেন। কোনো জরুরি প্রয়োজনে সরাসরি কল করুন +৮৮০ ১৬৩২-৪২২৫০৫।</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <div class="card" style="margin-bottom:20px;">
+          <h3 style="margin-bottom:14px;">ভর্তির জন্য প্রয়োজনীয় কাগজপত্র</h3>
+          <ul style="display:flex; flex-direction:column; gap:10px; color:#5A5F6B; font-size:0.92rem;">
+            <li>✓ জন্ম নিবন্ধন সনদের ফটোকপি</li>
+            <li>✓ পূর্ববর্তী বিদ্যালয়ের প্রশংসাপত্র (যদি থাকে)</li>
+            <li>✓ ২ কপি পাসপোর্ট সাইজের ছবি</li>
+            <li>✓ অভিভাবকের এনআইডি ফটোকপি</li>
+            <li>✓ টিকা কার্ডের ফটোকপি</li>
+          </ul>
+        </div>
+        <div class="card" style="background:var(--navy); border:none;">
+          <h3 style="color:var(--white); margin-bottom:10px;">সহায়তা প্রয়োজন?</h3>
+          <p style="color:#C6CDD8; font-size:0.92rem; margin-bottom:16px;">ভর্তি প্রক্রিয়া নিয়ে যেকোনো প্রশ্নে আমাদের অফিসে সরাসরি যোগাযোগ করুন।</p>
+          <a href="contact.html" style="color:var(--gold-light); font-weight:600; font-size:0.92rem;">যোগাযোগ পাতায় যান →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand"><img src="../assets/img/logo.png" alt="লোগো"><div class="bn">ইবনে খালদুন স্কুল</div></div>
+        <p class="desc">চট্টগ্রামের বাঁশখালীতে অবস্থিত একটি কুরআন ও বিজ্ঞান ভিত্তিক এবং আদর্শ সমৃদ্ধ শিক্ষা প্রতিষ্ঠান — যেটা ৬ষ্ঠ থেকে ৯ম শ্রেণী পর্যন্ত মানসম্মত শিক্ষা প্রদান করে।</p>
+        <div class="social-row"><a href="#" aria-label="Facebook">f</a><a href="#" aria-label="YouTube">▶</a><a href="#" aria-label="WhatsApp">✆</a></div>
+      </div>
+      <div><h5>দ্রুত লিংক</h5><ul>
+        <li><a href="../index.html">হোম</a></li>
+        <li><a href="about.html">আমাদের সম্পর্কে</a></li>
+        <li><a href="notices.html">নোটিশ</a></li>
+        <li><a href="staff.html">শিক্ষক মণ্ডলী</a></li>
+      </ul></div>
+      <div><h5>সেবাসমূহ</h5><ul>
+        <li><a href="admission.html">ভর্তি রেজিস্ট্রেশন</a></li>
+        <li><a href="gallery.html">গ্যালারি</a></li>
+        <li><a href="contact.html">যোগাযোগ করুন</a></li>
+      </ul></div>
+      <div><h5>যোগাযোগ</h5><ul>
+        <li>ইবনে খালদুন স্কুল, বাঁশখালী, চট্টগ্রাম</li>
+        <li><a href="mailto:ibnkhaldunschoolbanshkhali@gmail.com">ibnkhaldunschoolbanshkhali@gmail.com</a></li>
+        <li><a href="tel:+8801632422505">+৮৮০ ১৬৩২-৪২২৫০৫</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© ২০২৬ ইবনে খালদুন স্কুল, বাঁশখালী। সর্বস্বত্ব সংরক্ষিত।</span>
+      <span><a href="https://wa.me/8801642622989" target="_blank" rel="noopener" style="color:inherit; text-decoration:none;">Developed by Joynal Abedin Sajid</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/main.js"></script>
+</body>
+</html>

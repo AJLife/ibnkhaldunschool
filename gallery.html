@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+<title>গ্যালারি — Ibn Khaldun School, Banshkhali</title>
+<link rel="icon" href="../assets/img/logo.png" type="image/png">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+.ph-1{ background:linear-gradient(135deg,#1B3A5C,#2A4A6E); }
+.ph-2{ background:linear-gradient(135deg,#2A4A6E,#3E6B4F); }
+.ph-3{ background:linear-gradient(135deg,#C9A24B,#8A6A20); }
+.ph-4{ background:linear-gradient(135deg,#0F2540,#1B3A5C); }
+.school-slide{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; opacity:0; animation:schoolCrossfade 6s ease-in-out infinite; }
+.school-slide.s1{ animation-delay:0s; }
+.school-slide.s2{ animation-delay:3s; }
+@keyframes schoolCrossfade{
+  0%{ opacity:1; }
+  45%{ opacity:1; }
+  55%{ opacity:0; }
+  100%{ opacity:0; }
+}
+.lightbox{
+  position:fixed; inset:0; z-index:9999;
+  background:rgba(10,20,35,0.92);
+  display:none; align-items:center; justify-content:center;
+  padding:24px; cursor:zoom-out;
+}
+.lightbox.open{ display:flex; }
+.lightbox img{
+  max-width:100%; max-height:100%;
+  border-radius:6px; box-shadow:0 10px 40px rgba(0,0,0,.5);
+}
+.lightbox-close{
+  position:absolute; top:16px; right:20px;
+  background:none; border:none; color:#fff; font-size:2.4rem;
+  cursor:pointer; line-height:1; opacity:.85;
+}
+.lightbox-close:hover{ opacity:1; }
+.gallery-item .ph img{ width:100%; height:100%; object-fit:cover; display:block; }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="marquee">
+    <div class="marquee-track">
+      <span>২০২৭ শিক্ষাবর্ষের ভর্তি চলছে — ৬ষ্ঠ থেকে নবম শ্রেণি পর্যন্ত সীমিত আসনে। আবেদনের শেষ তারিখ ৩০ নভেম্বর, ২০২৬।</span>
+    </div>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a href="../index.html" class="brand">
+      <img src="../assets/img/logo.png" alt="ইবনে খালদুন স্কুল লোগো">
+      <div class="brand-text"><div class="bn">ইবনে খালদুন স্কুল</div><div class="en">Banshkhali</div></div>
+    </a>
+    <button class="hamburger" aria-label="মেনু খুলুন" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="../index.html">হোম</a></li>
+        <li class="has-dropdown">
+          <a href="about.html">আমাদের সম্পর্কে <span class="caret">▾</span></a>
+          <button class="dd-toggle" aria-label="সাবমেনু খুলুন"><span class="caret">▾</span></button>
+          <div class="dropdown-panel">
+            <a href="about.html#history"><span class="dd-ic">📖</span> আমাদের পরিচিতি ও ইতিহাস</a>
+            <a href="about.html#board"><span class="dd-ic">🏛️</span> স্কুল পরিচালনা পর্ষদ</a>
+            <a href="about.html#shareholders"><span class="dd-ic">🤝</span> সম্মানিত বিনিয়োগকারীগণ</a>
+            <a href="about.html#staff-intro"><span class="dd-ic">👩‍🏫</span> শিক্ষক ও স্টাফ পরিচিতি</a>
+            <a href="about.html#facilities"><span class="dd-ic">🏫</span> সুযোগ-সুবিধা ও ক্যাম্পাস</a>
+            <a href="about.html#cocurricular"><span class="dd-ic">🎭</span> কো-কারিকুলার এক্টিভিটিস</a>
+          </div>
+        </li>
+        <li><a href="notices.html">নোটিশ</a></li>
+        <li><a href="staff.html">শিক্ষক মণ্ডলী</a></li>
+        <li><a href="gallery.html" class="active">গ্যালারি</a></li>
+        <li><a href="contact.html">যোগাযোগ</a></li>
+        <li><a href="admission.html" class="nav-cta">ভর্তি ফরম</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="page-head">
+  <div class="container">
+    <div class="breadcrumb"><a href="../index.html">হোম</a> / গ্যালারি</div>
+    <h1>ছবি ও ভিডিও গ্যালারি</h1>
+    <p>স্কুলের বিভিন্ন অনুষ্ঠান, ক্লাসরুম কার্যক্রম ও ক্যাম্পাসের কিছু মুহূর্ত।</p>
+  </div>
+</div>
+
+<section style="padding-bottom:0;">
+  <div class="container">
+    <div class="gallery-subnav reveal">
+      <a href="#photos" class="active" id="subnavPhotos">📷 ফটো গ্যালারি</a>
+      <a href="#videos" id="subnavVideos">🎬 ভিডিওচিত্র</a>
+    </div>
+  </div>
+</section>
+
+<section id="photos">
+  <div class="container">
+    <div class="gallery-filters reveal">
+      <button class="gfilter active" data-filter="all">সকল</button>
+      <button class="gfilter" data-filter="campus">ক্যাম্পাস</button>
+      <button class="gfilter" data-filter="event">অনুষ্ঠান</button>
+      <button class="gfilter" data-filter="class">ক্লাসরুম</button>
+      <button class="gfilter" data-filter="sports">ক্রীড়া</button>
+    </div>
+
+    <div class="gallery-grid reveal">
+      <div class="gallery-item" data-category="campus"><div class="ph ph-1"><img class="school-slide s1" src="../assets/img/scl.jpg" alt="স্কুল ভবন ১"><img class="school-slide s2" src="../assets/img/school.jpg" alt="স্কুল ভবন ২"></div><div class="cap">স্কুল ভবন</div></div>
+      <div class="gallery-item" data-category="class"><div class="ph ph-2"><img src="../assets/img/1.jpg" alt="ক্লাসরুম কার্যক্রম"></div><div class="cap">ক্লাসরুম কার্যক্রম</div></div>
+      <div class="gallery-item" data-category="event"><div class="ph ph-3"><img src="../assets/img/2.jpg" alt="বার্ষিক পুরস্কার বিতরণী"></div><div class="cap">বার্ষিক পুরস্কার বিতরণী</div></div>
+      <div class="gallery-item" data-category="sports"><div class="ph ph-4"><img src="../assets/img/3.jpg" alt="ক্রীড়া প্রতিযোগিতা"></div><div class="cap">ক্রীড়া প্রতিযোগিতা</div></div>
+      <div class="gallery-item" data-category="campus"><div class="ph ph-2"><img src="../assets/img/4.jpg" alt="খেলার মাঠ"></div><div class="cap">খেলার মাঠ</div></div>
+      <div class="gallery-item" data-category="event"><div class="ph ph-1"><img src="../assets/img/5.jpg" alt="সাংস্কৃতিক অনুষ্ঠান"></div><div class="cap">সাংস্কৃতিক অনুষ্ঠান</div></div>
+      <div class="gallery-item" data-category="class"><div class="ph ph-3"><img src="../assets/img/6.jpg" alt="বিজ্ঞানাগার"></div><div class="cap">বিজ্ঞানাগার</div></div>
+      <div class="gallery-item" data-category="sports"><div class="ph ph-4"><img src="../assets/img/7.jpg" alt="ফুটবল টুর্নামেন্ট"></div><div class="cap">ফুটবল টুর্নামেন্ট</div></div>
+      <div class="gallery-item" data-category="campus"><div class="ph ph-1"><img src="../assets/img/8.jpg" alt="লাইব্রেরি"></div><div class="cap">লাইব্রেরি</div></div>
+      <div class="gallery-item" data-category="event"><div class="ph ph-2"><img src="../assets/img/9.jpg" alt="মিলাদ মাহফিল"></div><div class="cap">মিলাদ মাহফিল</div></div>
+      <div class="gallery-item" data-category="class"><div class="ph ph-3"><img src="../assets/img/10.jpg" alt="কম্পিউটার ল্যাব"></div><div class="cap">কম্পিউটার ল্যাব</div></div>
+      <div class="gallery-item" data-category="sports"><div class="ph ph-4"><img src="../assets/img/11.jpg" alt="বিজয়ী দল"></div><div class="cap">বিজয়ী দল</div></div>
+      <div class="gallery-item" data-category="campus"><div class="ph ph-1"><img src="../assets/img/12.jpg" alt="স্কুল প্রাঙ্গণ"></div><div class="cap">স্কুল প্রাঙ্গণ</div></div>
+      <div class="gallery-item" data-category="event"><div class="ph ph-2"><img src="../assets/img/13.jpg" alt="অভিভাবক সমাবেশ"></div><div class="cap">অভিভাবক সমাবেশ</div></div>
+      <div class="gallery-item" data-category="class"><div class="ph ph-3"><img src="../assets/img/14.jpg" alt="শ্রেণিকক্ষ কার্যক্রম"></div><div class="cap">শ্রেণিকক্ষ কার্যক্রম</div></div>
+      <div class="gallery-item" data-category="sports"><div class="ph ph-4"><img src="../assets/img/15.jpg" alt="দৌড় প্রতিযোগিতা"></div><div class="cap">দৌড় প্রতিযোগিতা</div></div>
+      <div class="gallery-item" data-category="campus"><div class="ph ph-1"><img src="../assets/img/16.jpg" alt="ক্যাম্পাসের দৃশ্য"></div><div class="cap">ক্যাম্পাসের দৃশ্য</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt" id="videos">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="kicker">চলমান দৃশ্য</div>
+      <h2>ভিডিওচিত্র</h2>
+      <p>স্কুলের বিভিন্ন অনুষ্ঠান ও কার্যক্রমের ভিডিও সংকলন।</p>
+    </div>
+    <div class="video-grid reveal">
+      <div class="video-card">
+        <div class="video-thumb"><span class="play">▶</span></div>
+        <div class="vcap">বার্ষিক ক্রীড়া প্রতিযোগিতা — হাইলাইটস</div>
+      </div>
+      <div class="video-card">
+        <div class="video-thumb"><span class="play">▶</span></div>
+        <div class="vcap">বার্ষিক পুরস্কার বিতরণী অনুষ্ঠান</div>
+      </div>
+      <div class="video-card">
+        <div class="video-thumb"><span class="play">▶</span></div>
+        <div class="vcap">ক্যাম্পাস পরিচিতি — ইবনে খালদুন স্কুল</div>
+      </div>
+      <div class="video-card">
+        <div class="video-thumb"><span class="play">▶</span></div>
+        <div class="vcap">সাংস্কৃতিক অনুষ্ঠান ২০২৬</div>
+      </div>
+      <div class="video-card">
+        <div class="video-thumb"><span class="play">▶</span></div>
+        <div class="vcap">মিলাদ মাহফিল ও দোয়া অনুষ্ঠান</div>
+      </div>
+      <div class="video-card">
+        <div class="video-thumb"><span class="play">▶</span></div>
+        <div class="vcap">শিক্ষার্থীদের অনুভূতি</div>
+      </div>
+    </div>
+    <p style="font-size:0.82rem; color:#8A8F99; margin-top:20px;">* প্রকৃত ভিডিও যুক্ত করতে ভিডিও ফাইল বা YouTube এমবেড লিংক দিয়ে থাম্বনেইলগুলো প্রতিস্থাপন করুন।</p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand"><img src="../assets/img/logo.png" alt="লোগো"><div class="bn">ইবনে খালদুন স্কুল</div></div>
+        <p class="desc">চট্টগ্রামের বাঁশখালীতে অবস্থিত একটি কুরআন ও বিজ্ঞান ভিত্তিক এবং আদর্শ সমৃদ্ধ শিক্ষা প্রতিষ্ঠান — যেটা ৬ষ্ঠ থেকে ৯ম শ্রেণী পর্যন্ত মানসম্মত শিক্ষা প্রদান করে।</p>
+        <div class="social-row"><a href="#" aria-label="Facebook">f</a><a href="#" aria-label="YouTube">▶</a><a href="#" aria-label="WhatsApp">✆</a></div>
+      </div>
+      <div><h5>দ্রুত লিংক</h5><ul>
+        <li><a href="../index.html">হোম</a></li>
+        <li><a href="about.html">আমাদের সম্পর্কে</a></li>
+        <li><a href="notices.html">নোটিশ</a></li>
+        <li><a href="staff.html">শিক্ষক মণ্ডলী</a></li>
+      </ul></div>
+      <div><h5>সেবাসমূহ</h5><ul>
+        <li><a href="admission.html">ভর্তি রেজিস্ট্রেশন</a></li>
+        <li><a href="gallery.html">গ্যালারি</a></li>
+        <li><a href="contact.html">যোগাযোগ করুন</a></li>
+      </ul></div>
+      <div><h5>যোগাযোগ</h5><ul>
+        <li>ইবনে খালদুন স্কুল, বাঁশখালী, চট্টগ্রাম</li>
+        <li><a href="mailto:ibnkhaldunschoolbanshkhali@gmail.com">ibnkhaldunschoolbanshkhali@gmail.com</a></li>
+        <li><a href="tel:+8801632422505">+৮৮০ ১৬৩২-৪২২৫০৫</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© ২০২৬ ইবনে খালদুন স্কুল, বাঁশখালী। সর্বস্বত্ব সংরক্ষিত।</span>
+      <span><a href="https://wa.me/8801642622989" target="_blank" rel="noopener" style="color:inherit; text-decoration:none;">Developed by Joynal Abedin Sajid</a></span>
+    </div>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightbox-close" aria-label="বন্ধ করুন">&times;</button>
+  <img src="" alt="" id="lightboxImg">
+</div>
+
+<script src="../assets/main.js"></script>
+</body>
+</html>

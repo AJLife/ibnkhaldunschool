@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+<title>যোগাযোগ — Ibn Khaldun School, Banshkhali</title>
+<link rel="icon" href="../assets/img/logo.png" type="image/png">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="marquee">
+    <div class="marquee-track">
+      <span>২০২৭ শিক্ষাবর্ষের ভর্তি চলছে — ৬ষ্ঠ থেকে নবম শ্রেণি পর্যন্ত সীমিত আসনে। আবেদনের শেষ তারিখ ৩০ নভেম্বর, ২০২৬।</span>
+    </div>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a href="../index.html" class="brand">
+      <img src="../assets/img/logo.png" alt="ইবনে খালদুন স্কুল লোগো">
+      <div class="brand-text"><div class="bn">ইবনে খালদুন স্কুল</div><div class="en">Banshkhali</div></div>
+    </a>
+    <button class="hamburger" aria-label="মেনু খুলুন" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="../index.html">হোম</a></li>
+        <li class="has-dropdown">
+          <a href="about.html">আমাদের সম্পর্কে <span class="caret">▾</span></a>
+          <button class="dd-toggle" aria-label="সাবমেনু খুলুন"><span class="caret">▾</span></button>
+          <div class="dropdown-panel">
+            <a href="about.html#history"><span class="dd-ic">📖</span> আমাদের পরিচিতি ও ইতিহাস</a>
+            <a href="about.html#board"><span class="dd-ic">🏛️</span> স্কুল পরিচালনা পর্ষদ</a>
+            <a href="about.html#shareholders"><span class="dd-ic">🤝</span> সম্মানিত বিনিয়োগকারীগণ</a>
+            <a href="about.html#staff-intro"><span class="dd-ic">👩‍🏫</span> শিক্ষক ও স্টাফ পরিচিতি</a>
+            <a href="about.html#facilities"><span class="dd-ic">🏫</span> সুযোগ-সুবিধা ও ক্যাম্পাস</a>
+            <a href="about.html#cocurricular"><span class="dd-ic">🎭</span> কো-কারিকুলার এক্টিভিটিস</a>
+          </div>
+        </li>
+        <li><a href="notices.html">নোটিশ</a></li>
+        <li><a href="staff.html">শিক্ষক মণ্ডলী</a></li>
+        <li><a href="gallery.html">গ্যালারি</a></li>
+        <li><a href="contact.html" class="active">যোগাযোগ</a></li>
+        <li><a href="admission.html" class="nav-cta">ভর্তি ফরম</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="page-head">
+  <div class="container">
+    <div class="breadcrumb"><a href="../index.html">হোম</a> / যোগাযোগ</div>
+    <h1>আমাদের সাথে যোগাযোগ করুন</h1>
+    <p>কোনো প্রশ্ন বা জিজ্ঞাসা থাকলে নিচের তথ্য ব্যবহার করে আমাদের সাথে যোগাযোগ করুন।</p>
+  </div>
+</div>
+
+<section class="section-navy">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="reveal">
+        <div class="form-card" style="background:var(--white);">
+          <h3 style="margin-bottom:20px;">বার্তা পাঠান</h3>
+          <form id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+            <input type="hidden" name="form-name" value="contact">
+            <p class="hidden" style="display:none;"><label>Don't fill this out if you're human: <input name="bot-field"></label></p>
+            <div class="form-row">
+              <div class="field">
+                <label for="cName">আপনার নাম <span class="req">*</span></label>
+                <input type="text" id="cName" name="cName" required>
+              </div>
+              <div class="field">
+                <label for="cPhone">মোবাইল নম্বর <span class="req">*</span></label>
+                <input type="tel" id="cPhone" name="cPhone" required>
+              </div>
+            </div>
+            <div class="field">
+              <label for="cEmail">ইমেইল</label>
+              <input type="email" id="cEmail" name="cEmail">
+            </div>
+            <div class="field">
+              <label for="cSubject">বিষয় <span class="req">*</span></label>
+              <select id="cSubject" name="cSubject" required>
+                <option value="">নির্বাচন করুন</option>
+                <option>ভর্তি সংক্রান্ত জিজ্ঞাসা</option>
+                <option>একাডেমিক তথ্য</option>
+                <option>ফি সংক্রান্ত</option>
+                <option>অন্যান্য</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="cMessage">আপনার বার্তা <span class="req">*</span></label>
+              <textarea id="cMessage" name="cMessage" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="border:none;">বার্তা পাঠান</button>
+          </form>
+          <div class="form-success" id="contactSuccess">
+            <div class="check">✓</div>
+            <h3>বার্তা পাঠানো হয়েছে</h3>
+            <p>আমরা যত দ্রুত সম্ভব আপনার সাথে যোগাযোগ করব। ধন্যবাদ।</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <div class="info-item">
+          <div class="ic">📍</div>
+          <div><h4>ঠিকানা</h4><p>ইবনে খালদুন স্কুল, প্রধান সড়ক, বাঁশখালী, চট্টগ্রাম, বাংলাদেশ</p></div>
+        </div>
+        <div class="info-item">
+          <div class="ic">📞</div>
+          <div><h4>ফোন</h4><a href="tel:+8801632422505">+৮৮০ ১৬৩২-৪২২৫০৫</a></div>
+        </div>
+        <div class="info-item">
+          <div class="ic">✉️</div>
+          <div><h4>ইমেইল</h4><a href="mailto:ibnkhaldunschoolbanshkhali@gmail.com">ibnkhaldunschoolbanshkhali@gmail.com</a></div>
+        </div>
+        <div class="info-item">
+          <div class="ic">🕐</div>
+          <div><h4>অফিস সময়</h4><p>শনিবার – বৃহস্পতিবার, সকাল ৮টা – বিকাল ৪টা</p></div>
+        </div>
+
+        <div class="map-embed mt-24">
+          <iframe
+            src="https://www.openstreetmap.org/export/embed.html?bbox=91.9%2C22.05%2C92.1%2C22.2&layer=mapnik"
+            loading="lazy"
+            title="স্কুলের অবস্থান মানচিত্র">
+          </iframe>
+        </div>
+        <p style="font-size:0.8rem; color:#B9C3D1; margin-top:8px;">* সঠিক অবস্থান পরবর্তীতে হালনাগাদ করা হবে।</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand"><img src="../assets/img/logo.png" alt="লোগো"><div class="bn">ইবনে খালদুন স্কুল</div></div>
+        <p class="desc">চট্টগ্রামের বাঁশখালীতে অবস্থিত একটি কুরআন ও বিজ্ঞান ভিত্তিক এবং আদর্শ সমৃদ্ধ শিক্ষা প্রতিষ্ঠান — যেটা ৬ষ্ঠ থেকে ৯ম শ্রেণী পর্যন্ত মানসম্মত শিক্ষা প্রদান করে।</p>
+        <div class="social-row"><a href="#" aria-label="Facebook">f</a><a href="#" aria-label="YouTube">▶</a><a href="#" aria-label="WhatsApp">✆</a></div>
+      </div>
+      <div><h5>দ্রুত লিংক</h5><ul>
+        <li><a href="../index.html">হোম</a></li>
+        <li><a href="about.html">আমাদের সম্পর্কে</a></li>
+        <li><a href="notices.html">নোটিশ</a></li>
+        <li><a href="staff.html">শিক্ষক মণ্ডলী</a></li>
+      </ul></div>
+      <div><h5>সেবাসমূহ</h5><ul>
+        <li><a href="admission.html">ভর্তি রেজিস্ট্রেশন</a></li>
+        <li><a href="gallery.html">গ্যালারি</a></li>
+        <li><a href="contact.html">যোগাযোগ করুন</a></li>
+      </ul></div>
+      <div><h5>যোগাযোগ</h5><ul>
+        <li>ইবনে খালদুন স্কুল, বাঁশখালী, চট্টগ্রাম</li>
+        <li><a href="mailto:ibnkhaldunschoolbanshkhali@gmail.com">ibnkhaldunschoolbanshkhali@gmail.com</a></li>
+        <li><a href="tel:+8801632422505">+৮৮০ ১৬৩২-৪২২৫০৫</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© ২০২৬ ইবনে খালদুন স্কুল, বাঁশখালী। সর্বস্বত্ব সংরক্ষিত।</span>
+      <span><a href="https://wa.me/8801642622989" target="_blank" rel="noopener" style="color:inherit; text-decoration:none;">Developed by Joynal Abedin Sajid</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/main.js"></script>
+</body>
+</html>
