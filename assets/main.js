@@ -243,9 +243,11 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.dropdown-panel a').forEach(link => {
     link.addEventListener('click', () => {
       const li = link.closest('.has-dropdown');
+      const currentNav = document.querySelector('.main-nav');
+      const currentHamburger = document.querySelector('.hamburger');
       if (li) li.classList.remove('open');
-      if (nav) nav.classList.remove('open');
-      if (hamburger) hamburger.setAttribute('aria-expanded', 'false');
+      if (currentNav) currentNav.classList.remove('open');
+      if (currentHamburger) currentHamburger.setAttribute('aria-expanded', 'false');
     });
   });
 
