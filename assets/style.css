@@ -633,14 +633,8 @@ section {
 /* ---------- Shareholders ---------- */
 .shareholder-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 22px;
-}
-
-@media (max-width:1100px) {
-  .shareholder-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 @media (max-width:940px) {
@@ -1559,6 +1553,9 @@ nav.main-nav li.has-dropdown>a .caret {
   top: 100%;
   left: 0;
   min-width: 300px;
+  max-height: calc(100vh - var(--topbar-h, 36px) - 100px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
   background: var(--navy-dark);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 6px;
