@@ -4,3 +4,5 @@
 # Large local media files are not stored in the GitHub Pages repository
 assets/videos/
 assets/img/*.mp4
+.vercel
+.env*

@@ -7,6 +7,49 @@
 <title>শিক্ষক মণ্ডলী — Ibn Khaldun School, Banshkhali</title>
 <link rel="icon" href="../assets/img/logo.png" type="image/png">
 <link rel="stylesheet" href="../assets/style.css">
+<style>
+.staff-grid-new{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
+@media(max-width:940px){.staff-grid-new{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:640px){.staff-grid-new{grid-template-columns:1fr;}}
+
+.teacher-card{background:var(--white);border:1px solid var(--paper-line);border-radius:16px;overflow:hidden;text-align:center;box-shadow:0 6px 22px rgba(15,37,64,0.07);transition:transform .25s ease,box-shadow .25s ease;}
+.teacher-card:hover{transform:translateY(-6px);box-shadow:0 16px 34px rgba(15,37,64,0.14);}
+.teacher-card .tc-photo{width:100%;aspect-ratio:1/0.9;display:flex;align-items:flex-end;justify-content:center;overflow:hidden;position:relative;padding:22px 22px 0;background:linear-gradient(145deg,#EAF0F4 0%,#D7E2E8 100%);}
+.teacher-card .tc-photo::before{content:"";position:absolute;width:70%;aspect-ratio:1;border-radius:50%;top:-34%;right:-18%;background:rgba(201,162,75,0.18);}
+.teacher-card .tc-photo img{position:relative;width:min(76%,190px);height:auto;aspect-ratio:1;object-fit:cover;display:block;border:5px solid var(--white);border-radius:50%;box-shadow:0 8px 20px rgba(15,37,64,0.18);transition:transform .3s ease;}
+.teacher-card:hover .tc-photo img{transform:translateY(-4px) scale(1.02);}
+.teacher-card .tc-photo .tc-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:3.2rem;color:var(--gold-light);background:var(--navy);}
+.teacher-card .tc-body{padding:20px 16px 22px;}
+.teacher-card .tc-body h4{font-family:'Tiro Bangla',serif;color:var(--navy-dark);font-size:1.12rem;margin-bottom:4px;}
+.teacher-card .tc-body .role{color:var(--green);font-size:0.86rem;font-weight:600;margin-bottom:14px;}
+.btn-view-profile{display:inline-block;padding:9px 22px;border-radius:24px;font-size:0.86rem;font-weight:600;background:var(--navy);color:var(--paper);border:none;cursor:pointer;transition:background .2s,transform .2s,box-shadow .2s;}
+.btn-view-profile:hover{background:var(--navy-mid);transform:translateY(-1px);}
+
+.pm-overlay{position:fixed;inset:0;z-index:9999;background:rgba(10,20,35,0.88);display:none;align-items:center;justify-content:center;padding:16px;overflow-y:auto;}
+.pm-overlay.open{display:flex;}
+.pm-box{background:var(--white);border-radius:12px;max-width:560px;width:100%;max-height:calc(100vh - 32px);display:flex;flex-direction:column;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.35);position:relative;}
+.pm-close{position:absolute;top:14px;right:16px;background:none;border:none;font-size:1.8rem;cursor:pointer;color:#fff;line-height:1;z-index:2;}
+.pm-close:hover{opacity:0.8;}
+.pm-header{background:linear-gradient(135deg,var(--navy),var(--navy-dark));padding:40px 30px 30px;text-align:center;}
+.pm-photo{width:110px;height:110px;border-radius:50%;overflow:hidden;margin:0 auto 16px;border:4px solid var(--gold);box-shadow:0 6px 20px rgba(0,0,0,0.2);}
+.pm-photo img{width:100%;height:100%;object-fit:cover;}
+.pm-photo .pm-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:2.6rem;color:var(--gold-light);background:var(--navy-mid);}
+.pm-header h3{color:var(--white);font-family:'Tiro Bangla',serif;font-size:1.3rem;margin-bottom:4px;}
+.pm-header .pm-role{color:var(--gold-light);font-size:0.9rem;}
+.pm-body{padding:28px 30px 32px;overflow-y:auto;}
+.pm-body .pm-row{display:flex;gap:12px;padding:14px 0;border-bottom:1px solid var(--paper-line);align-items:flex-start;}
+.pm-body .pm-row:last-child{border-bottom:none;}
+.pm-body .pm-label{min-width:110px;color:#8A8F99;font-size:0.86rem;font-weight:600;}
+.pm-body .pm-value{color:var(--ink);font-size:0.94rem;}
+@media(max-width:640px){
+  .pm-overlay{padding:10px;align-items:flex-start;}
+  .pm-box{max-height:calc(100vh - 20px);}
+  .pm-header{padding:28px 20px 22px;}
+  .pm-body{padding:18px 20px 22px;}
+  .pm-body .pm-row{gap:8px;padding:12px 0;}
+  .pm-body .pm-label{min-width:92px;}
+}
+</style>
 </head>
 <body>
 
@@ -44,13 +87,13 @@
         <li><a href="staff.html" class="active">শিক্ষক মণ্ডলী</a></li>
         <li><a href="gallery.html">গ্যালারি</a></li>
         <li><a href="contact.html">যোগাযোগ</a></li>
-        <li><a href="admission.html" class="nav-cta">ভর্তি ফরম</a></li>
+          <li><a href="pages/admission.html" class="nav-cta">ভর্তি রেজিস্ট্রেশন</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
-<div class="page-head">
+<div class="page-head" style="background-image:url('../assets/img/scl.jpg');">
   <div class="container">
     <div class="breadcrumb"><a href="../index.html">হোম</a> / শিক্ষক মণ্ডলী</div>
     <h1>আমাদের শিক্ষক মণ্ডলী</h1>
@@ -64,30 +107,92 @@
       <div class="kicker">শিক্ষকমণ্ডলী</div>
       <h2>বিষয়ভিত্তিক শিক্ষকবৃন্দ</h2>
     </div>
-    <div class="grid-4 reveal">
-      <div class="staff-card"><div class="staff-photo">কা</div><div class="staff-info"><h4>কাইসার</h4><div class="role">ইংরেজি শিক্ষক</div><div class="subj">ইবনে খালদুন স্কুল</div></div></div>
-      <div class="staff-card"><div class="staff-photo">রা</div><div class="staff-info"><h4>রাশেদ</h4><div class="role">গণিত শিক্ষক</div><div class="subj">ইবনে খালদুন স্কুল</div></div></div>
-      <div class="staff-card"><div class="staff-photo">সা</div><div class="staff-info"><h4>সাবিনা</h4><div class="role">বাংলা শিক্ষক</div><div class="subj">ইবনে খালদুন স্কুল</div></div></div>
-      <div class="staff-card"><div class="staff-photo">জু</div><div class="staff-info"><h4>জুবায়ের</h4><div class="role">বিজ্ঞান শিক্ষক</div><div class="subj">ইবনে খালদুন স্কুল</div></div></div>
-      <div class="staff-card"><div class="staff-photo">মা</div><div class="staff-info"><h4>মাহমুদ</h4><div class="role">সামাজিক বিজ্ঞান শিক্ষক</div><div class="subj">ইবনে খালদুন স্কুল</div></div></div>
-      <div class="staff-card"><div class="staff-photo">ফা</div><div class="staff-info"><h4>ফারহানা</h4><div class="role">ইসলামিক শিক্ষা শিক্ষক</div><div class="subj">ইবনে খালদুন স্কুল</div></div></div>
-      <div class="staff-card"><div class="staff-photo">তা</div><div class="staff-info"><h4>তানভীর</h4><div class="role">তথ্য ও যোগাযোগ প্রযুক্তি শিক্ষক</div><div class="subj">ইবনে খালদুন স্কুল</div></div></div>
-      <div class="staff-card"><div class="staff-photo">নু</div><div class="staff-info"><h4>নুসরাত</h4><div class="role">প্রাক-প্রাথমিক শিক্ষক</div><div class="subj">ইবনে খালদুন স্কুল</div></div></div>
-      <div class="staff-card"><div class="staff-photo">আ</div><div class="staff-info"><h4>আবদুল্লাহ</h4><div class="role">গণিত শিক্ষক</div><div class="subj">ইবনে খালদুন স্কুল</div></div></div>
-      <div class="staff-card"><div class="staff-photo">শা</div><div class="staff-info"><h4>শারমিন</h4><div class="role">ইংরেজি শিক্ষক</div><div class="subj">ইবনে খালদুন স্কুল</div></div></div>
-      <div class="staff-card"><div class="staff-photo">ইম</div><div class="staff-info"><h4>ইমরান</h4><div class="role">বাংলা শিক্ষক</div><div class="subj">ইবনে খালদুন স্কুল</div></div></div>
-      <div class="staff-card"><div class="staff-photo">মু</div><div class="staff-info"><h4>মুশফিক</h4><div class="role">বিজ্ঞান শিক্ষক</div><div class="subj">ইবনে খালদুন স্কুল</div></div></div>
-      <div class="staff-card"><div class="staff-photo">লি</div><div class="staff-info"><h4>লিমা</h4><div class="role">সামাজিক বিজ্ঞান শিক্ষক</div><div class="subj">ইবনে খালদুন স্কুল</div></div></div>
-      <div class="staff-card"><div class="staff-photo">হা</div><div class="staff-info"><h4>হাসান</h4><div class="role">ইসলামিক শিক্ষা শিক্ষক</div><div class="subj">ইবনে খালদুন স্কুল</div></div></div>
-      <div class="staff-card"><div class="staff-photo">মি</div><div class="staff-info"><h4>মিনহাজ</h4><div class="role">ইংরেজি শিক্ষক</div><div class="subj">ইবনে খালদুন স্কুল</div></div></div>
-      <div class="staff-card"><div class="staff-photo">সু</div><div class="staff-info"><h4>সুমাইয়া</h4><div class="role">বাংলা শিক্ষক</div><div class="subj">ইবনে খালদুন স্কুল</div></div></div>
-      <div class="staff-card"><div class="staff-photo">আশ</div><div class="staff-info"><h4>আশরাফ</h4><div class="role">বিজ্ঞান শিক্ষক</div><div class="subj">ইবনে খালদুন স্কুল</div></div></div>
-      <div class="staff-card"><div class="staff-photo">রু</div><div class="staff-info"><h4>রুবাইয়া</h4><div class="role">গণিত শিক্ষক</div><div class="subj">ইবনে খালদুন স্কুল</div></div></div>
-      <div class="staff-card"><div class="staff-photo">নাঈ</div><div class="staff-info"><h4>নাঈম</h4><div class="role">শারীরিক শিক্ষা শিক্ষক</div><div class="subj">ইবনে খালদুন স্কুল</div></div></div>
-      <div class="staff-card"><div class="staff-photo">মা</div><div class="staff-info"><h4>মারিয়া</h4><div class="role">চারু ও কারুকলা শিক্ষক</div><div class="subj">ইবনে খালদুন স্কুল</div></div></div>
+    <div class="staff-grid-new reveal" id="teacherGrid">
+
+      <div class="teacher-card" data-name="মোহাম্মদ কাইসার উদ্দিন" data-subject="ইংরেজি" data-edu="বি.এ, এম.এ (ইংরেজি), জাতীয় বিশ্ববিদ্যালয়" data-exp="৫+ বছর" data-bio="ইংরেজি বিষয়ে দক্ষ ও অভিজ্ঞ শিক্ষক। শিক্ষার্থীদের ভাষা দক্ষতা বৃদ্ধি ও প্রতিভা বিকাশে নিরলস।">
+        <div class="tc-photo"><img src="assets/img/t1.png" alt="মোহাম্মদ কাইসার উদ্দিন"></div>
+        <div class="tc-body">
+          <h4>মোহাম্মদ কাইসার উদ্দিন</h4>
+          <div class="role">ইংরেজি</div>
+          <button class="btn-view-profile" data-index="0">ভিউ প্রোফাইল</button>
+        </div>
+      </div>
+
+      <div class="teacher-card" data-name="মোরশেদুল আলম" data-subject="গণিত" data-edu="বি.বি.এ (একাউন্টিং), এম.বিএ (একাউন্টিং), জাতীয় বিশ্ববিদ্যালয়" data-exp="৪+ বছর" data-bio="গণিত বিষয়ে সুন্দর ও সহজ পাঠদানের জন্য পরিচিত। শিক্ষার্থীদের যুক্তিবাদী চিন্তা গড়ে তুলতে প্রতিশ্রুতিবদ্ধ।">
+        <div class="tc-photo"><img src="assets/img/Tcr/Mrsh.png" alt="মোরশেদুল আলম"></div>
+        <div class="tc-body">
+          <h4>মোরশেদুল আলম</h4>
+          <div class="role">গণিত</div>
+          <button class="btn-view-profile" data-index="1">ভিউ প্রোফাইল</button>
+        </div>
+      </div>
+
+      <div class="teacher-card" data-name="মিফতাহুল জান্নাত" data-subject="বাংলা" data-edu="ফাজিল (বি.এ), কামিল (হাদিস), জাতীয় বিশ্ববিদ্যালয়" data-exp="৩+ বছর" data-bio="বাংলা সাহিত্য ও ভাষার প্রতি গভীর ভালোবাসাসম্পন্ন শিক্ষিকা। শিক্ষার্থীদের মাতৃভাষার প্রতি আকৃষ্ট করতে সর্বদা প্রচেষ্টাশীল।">
+        <div class="tc-photo"><img src="assets/img/Tcr/Mif.png" alt="মিফতাহুল জান্নাত"></div>
+        <div class="tc-body">
+          <h4>মিফতাহুল জান্নাত</h4>
+          <div class="role">বাংলা</div>
+          <button class="btn-view-profile" data-index="2">ভিউ প্রোফাইল</button>
+        </div>
+      </div>
+
+      <div class="teacher-card" data-name="মুবিনুল হক" data-subject="বিজ্ঞান" data-edu="বি.এসসি (গণিত), জাতীয় বিশ্ববিদ্যালয়" data-exp="৪+ বছর" data-bio="বিজ্ঞানকে সহজ ও আনন্দদায়ক করে তোলায় পারদর্শী। হাতে-কলমে পরীক্ষণের মাধ্যমে পাঠদান তাঁর বিশেষত্ব।">
+        <div class="tc-photo"><img src="assets/img/Tcr/Mubin.png" alt="মুবিনুল হক"></div>
+        <div class="tc-body">
+          <h4>মুবিনুল হক</h4>
+          <div class="role">বিজ্ঞান</div>
+          <button class="btn-view-profile" data-index="3">ভিউ প্রোফাইল</button>
+        </div>
+      </div>
+
+      <div class="teacher-card" data-name="মোহাম্মদ নেজাম উদ্দীন" data-subject="কৃষিশিক্ষা" data-edu="বি.বি.এস., জাতীয় বিশ্ববিদ্যালয়" data-exp="৩+ বছর" data-bio="সামাজিক বিজ্ঞান ও ইতিহাসে গভীর জ্ঞানসম্পন্ন শিক্ষক। দেশপ্রেম ও নাগরিকতার চর্চায় অনুপ্রেরণাদায়ক।">
+        <div class="tc-photo"><img src="assets/img/Tcr/Nzm.png" alt="মোহাম্মদ নেজাম উদ্দীন"></div>
+        <div class="tc-body">
+          <h4>মোহাম্মদ নেজাম উদ্দীন</h4>
+          <div class="role">কৃষিশিক্ষা</div>
+          <button class="btn-view-profile" data-index="4">ভিউ প্রোফাইল</button>
+        </div>
+      </div>
+
+      <div class="teacher-card" data-name="হাফেজ মোহাম্মদ ইদ্রিস" data-subject="কুরআন ও ইসলাম শিক্ষা" data-edu="বি.এ (ফাজিল), কামিল (হাদিস)" data-exp="৩+ বছর" data-bio="কুরআন, হাদিস ও ইসলাম শিক্ষায় পারদর্শী শিক্ষক। নৈতিক মূল্যবোধ ও চরিত্র গঠনে সক্রিয় ভূমিকা পালন করেন।">
+        <div class="tc-photo"><img src="assets/img/Tcr/Idrish.png" alt="হাফেজ মোহাম্মদ ইদ্রিস"></div>
+        <div class="tc-body">
+          <h4>হাফেজ মোহাম্মদ ইদ্রিস</h4>
+          <div class="role">কুরআন ও ইসলাম শিক্ষা</div>
+          <button class="btn-view-profile" data-index="5">ভিউ প্রোফাইল</button>
+        </div>
+      </div>
+
+      <div class="teacher-card" data-name="উম্মে হাবিবা ইশিতা" data-subject="তথ্য ও যোগাযোগ প্রযুক্তি (ICT)" data-edu="বি.বি.এস., জাতীয় বিশ্ববিদ্যালয়" data-exp="২+ বছর" data-bio="কম্পিউটার ও তথ্যপ্রযুক্তি বিষয়ে আধুনিক পাঠদানের মাধ্যমে শিক্ষার্থীদের ডিজিটাল দক্ষতা গড়ে তুলছেন।">
+        <div class="tc-photo"><img src="assets/img/Tcr/Ishita.png" alt="উম্মে হাবিবা ইশিতা"></div>
+        <div class="tc-body">
+          <h4>উম্মে হাবিবা ইশিতা</h4>
+          <div class="role">তথ্য ও যোগাযোগ প্রযুক্তি</div>
+          <button class="btn-view-profile" data-index="6">ভিউ প্রোফাইল</button>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
+
+<div class="pm-overlay" id="pmOverlay">
+  <div class="pm-box" id="pmBox">
+    <button class="pm-close" id="pmClose">&times;</button>
+    <div class="pm-header">
+      <div class="pm-photo" id="pmPhoto"></div>
+      <h3 id="pmName"></h3>
+      <div class="pm-role" id="pmSubject"></div>
+    </div>
+    <div class="pm-body">
+      <div class="pm-row"><div class="pm-label">পদবি</div><div class="pm-value" id="pmRole"></div></div>
+      <div class="pm-row"><div class="pm-label">বিষয়</div><div class="pm-value" id="pmSubj"></div></div>
+      <div class="pm-row"><div class="pm-label">শিক্ষাগত যোগ্যতা</div><div class="pm-value" id="pmEdu"></div></div>
+      <div class="pm-row"><div class="pm-label">অভিজ্ঞতা</div><div class="pm-value" id="pmExp"></div></div>
+      <div class="pm-row"><div class="pm-label">পরিচিতি</div><div class="pm-value" id="pmBio"></div></div>
+    </div>
+  </div>
+</div>
 
 <div class="cta-strip">
   <div class="container">
@@ -95,6 +200,8 @@
     <a href="contact.html" class="btn btn-navy">যোগাযোগ করুন</a>
   </div>
 </div>
+
+<div class="page-home-cta"><a href="index.html" class="btn btn-navy">হোম পেইজে ফিরে যান</a></div>
 
 <footer>
   <div class="container">
@@ -129,5 +236,48 @@
 </footer>
 
 <script src="../assets/main.js"></script>
+<script>
+(function(){
+  var cards = document.querySelectorAll('.teacher-card');
+  var overlay = document.getElementById('pmOverlay');
+  var pmBox = document.getElementById('pmBox');
+  var closeBtn = document.getElementById('pmClose');
+
+  cards.forEach(function(card){
+    card.querySelector('.btn-view-profile').addEventListener('click', function(e){
+      e.stopPropagation();
+      var photo = card.querySelector('.tc-photo img');
+      var pmPhoto = document.getElementById('pmPhoto');
+      if(photo){
+        pmPhoto.innerHTML = '<img src="'+photo.src+'" alt="'+photo.alt+'">';
+      } else {
+        pmPhoto.innerHTML = '<div class="pm-placeholder">👨‍🏫</div>';
+      }
+      document.getElementById('pmName').textContent = card.dataset.name || '';
+      document.getElementById('pmSubject').textContent = card.dataset.subject || '';
+      document.getElementById('pmRole').textContent = card.querySelector('.role').textContent || '';
+      document.getElementById('pmSubj').textContent = card.dataset.subject || '';
+      document.getElementById('pmEdu').textContent = card.dataset.edu || '';
+      document.getElementById('pmExp').textContent = card.dataset.exp || '';
+      document.getElementById('pmBio').textContent = card.dataset.bio || '';
+      overlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  function closeModal(){
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  closeBtn.addEventListener('click', closeModal);
+  overlay.addEventListener('click', function(e){
+    if(e.target === overlay) closeModal();
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') closeModal();
+  });
+}());
+</script>
 </body>
 </html>

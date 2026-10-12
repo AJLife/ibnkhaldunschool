@@ -244,6 +244,41 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  document.querySelectorAll('.dropdown-panel a').forEach(link => {
+    link.addEventListener('click', () => {
+      const li = link.closest('.has-dropdown');
+      const currentNav = document.querySelector('.main-nav');
+      const currentHamburger = document.querySelector('.hamburger');
+      if (li) {
+        li.classList.remove('open');
+        li.classList.add('dropdown-closing');
+        const panel = li.querySelector('.dropdown-panel');
+        if (panel) {
+          panel.style.opacity = '0';
+          panel.style.visibility = 'hidden';
+          panel.style.transform = 'translateY(6px)';
+          panel.style.pointerEvents = 'none';
+        }
+      }
+      link.blur();
+      if (currentNav) currentNav.classList.remove('open');
+      if (currentHamburger) currentHamburger.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  document.querySelectorAll('.has-dropdown').forEach(li => {
+    li.addEventListener('mouseenter', () => {
+      li.classList.remove('dropdown-closing');
+      const panel = li.querySelector('.dropdown-panel');
+      if (panel) {
+        panel.style.opacity = '';
+        panel.style.visibility = '';
+        panel.style.transform = '';
+        panel.style.pointerEvents = '';
+      }
+    });
+  });
+
   // ---------- Notice card + detail helpers ----------
   const escapeHtml = (str) => {
     const d = document.createElement('div');

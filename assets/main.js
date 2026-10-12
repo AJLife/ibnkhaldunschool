@@ -16,6 +16,13 @@ document.addEventListener('DOMContentLoaded', () => {
       const expanded = nav.classList.contains('open');
       hamburger.setAttribute('aria-expanded', expanded);
     });
+
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
+    });
   }
 
   // ---------- Scroll reveal ----------
@@ -165,6 +172,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // ---------- Hero background videos (slow motion) ----------
+  const heroVideos = document.querySelectorAll('.hero-video');
+  heroVideos.forEach(v => { v.playbackRate = 0.4; });
+
   // ---------- Scroll to top with progress ring ----------
   const stBtn = document.createElement('button');
   stBtn.className = 'scroll-top';
@@ -197,7 +208,6 @@ document.addEventListener('DOMContentLoaded', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 });
-
 /* ===========================================================
    PHASE 2 ADDITIONS
    Mobile dropdown, notice cards + detail rendering,
@@ -245,9 +255,33 @@ document.addEventListener('DOMContentLoaded', () => {
       const li = link.closest('.has-dropdown');
       const currentNav = document.querySelector('.main-nav');
       const currentHamburger = document.querySelector('.hamburger');
-      if (li) li.classList.remove('open');
+      if (li) {
+        li.classList.remove('open');
+        li.classList.add('dropdown-closing');
+        const panel = li.querySelector('.dropdown-panel');
+        if (panel) {
+          panel.style.opacity = '0';
+          panel.style.visibility = 'hidden';
+          panel.style.transform = 'translateY(6px)';
+          panel.style.pointerEvents = 'none';
+        }
+      }
+      link.blur();
       if (currentNav) currentNav.classList.remove('open');
       if (currentHamburger) currentHamburger.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  document.querySelectorAll('.has-dropdown').forEach(li => {
+    li.addEventListener('mouseenter', () => {
+      li.classList.remove('dropdown-closing');
+      const panel = li.querySelector('.dropdown-panel');
+      if (panel) {
+        panel.style.opacity = '';
+        panel.style.visibility = '';
+        panel.style.transform = '';
+        panel.style.pointerEvents = '';
+      }
     });
   });
 
@@ -281,8 +315,7 @@ document.addEventListener('DOMContentLoaded', () => {
         noticeGrid.innerHTML = '<p class="notice-empty">এই মুহূর্তে কোনো নোটিশ পাওয়া যায়নি।</p>';
         return;
       }
-      const detailBasePath = window.location.pathname.includes('/pages/') ? '../' : '';
-      noticeGrid.innerHTML = list.map(n => noticeCardHTML(n, detailBasePath)).join('');
+      noticeGrid.innerHTML = list.map(n => noticeCardHTML(n, '')).join('');
     };
     renderGrid(window.NOTICES);
 
@@ -452,5 +485,5 @@ document.addEventListener('DOMContentLoaded', () => {
       restartAutoplay();
     }
   }
-
 });
+
